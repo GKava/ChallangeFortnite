@@ -3,25 +3,277 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgrovfort"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/week_back"
+
     tools:context=".Week1">
 
     <LinearLayout
         android:id="@+id/headerlayout"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#604F4F4F">
+        android:layout_height="wrap_content"
+        android:background="#124F4F4F">
 
 
         <TextView
-            android:id="@+id/textViewHeader"
+            android:id="@+id/week1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Week 1"
+            android:text=" WEEK 1 \nCHALLENGES"
             android:textColor="#FFFF"
             android:typeface="monospace"
-            android:textSize="40dp" />
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/challange1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#604F4F4F"
+        app:layout_constraintTop_toBottomOf="@+id/headerlayout"
+        tools:layout_editor_absoluteX="16dp">
+
+
+        <TextView
+            android:padding="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Pickup a Legendary item in defferent matches (0/3)"
+            android:textColor="#FFFF"
+            android:textSize="20dp"
+           android:typeface="normal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/challange2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#604F4F4F"
+        app:layout_constraintTop_toBottomOf="@+id/challange1"
+        tools:layout_editor_absoluteX="16dp">
+
+
+        <TextView
+            android:padding="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Regain health from a Cozy Campfite (0/150)"
+            android:textColor="#FFFF"
+            android:textSize="20dp"
+            android:typeface="normal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/challange3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#604F4F4F"
+        app:layout_constraintTop_toBottomOf="@+id/challange2"
+        tools:layout_editor_absoluteX="16dp">
+
+
+        <TextView
+            android:padding="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="1. Search Chest (0/3) \n2. Register 2 boxes of supplies \n3. Register a Lama"
+            android:textColor="#FFFF"
+            android:textSize="20dp"
+            android:typeface="normal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/challange4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#604F4F4F"
+        app:layout_constraintTop_toBottomOf="@+id/challange3"
+        tools:layout_editor_absoluteX="16dp">
+
+
+        <TextView
+            android:padding="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Apply Shields (0/500)"
+            android:textColor="#FFFF"
+            android:textSize="20dp"
+            android:typeface="normal"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/challange5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#604F4F4F"
+        app:layout_constraintTop_toBottomOf="@+id/challange4"
+        tools:layout_editor_absoluteX="16dp">
+
+
+        <TextView
+            android:padding="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="1. Landing at Junk Junctiont \n2. Landing in Tomato Temple \n3. Landing on Tilted Towers \n4. Landing on Fatal Fields \n5. Landing in Flush Factory "
+            android:textColor="#FFFF"
+            android:textSize="20dp"
+            android:typeface="normal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/challange6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#604F4F4F"
+        app:layout_constraintTop_toBottomOf="@+id/challange5"
+        tools:layout_editor_absoluteX="16dp">
+
+
+        <TextView
+            android:padding="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Apply Shields (0/500)"
+            android:textColor="#FFFF"
+            android:textSize="20dp"
+            android:typeface="normal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/challange7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#604F4F4F"
+        app:layout_constraintTop_toBottomOf="@+id/challange6"
+        tools:layout_editor_absoluteX="16dp">
+
+
+        <TextView
+            android:padding="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Dance under different Streetlight Spotlight (0/7)  "
+            android:textColor="#FFFF"
+            android:textSize="20dp"
+            android:typeface="normal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/imagestreeetlight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:background="#604F4F4F"
+        app:layout_constraintTop_toBottomOf="@+id/challange7"
+        tools:layout_editor_absoluteX="16dp"
+        android:paddingBottom="5dp">
+
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        android:background="@drawable/streetlight"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/challange8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#604F4F4F"
+        app:layout_constraintTop_toBottomOf="@+id/imagestreeetlight"
+        tools:layout_editor_absoluteX="16dp">
+
+
+        <TextView
+            android:padding="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Eliminate opponents in different Named Location (0/5) "
+            android:textColor="#FFFF"
+            android:textSize="20dp"
+            android:typeface="normal"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/imagemap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:background="#604F4F4F"
+        app:layout_constraintTop_toBottomOf="@+id/challange8"
+        tools:layout_editor_absoluteX="16dp"
+        android:paddingBottom="5dp">
+
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:layout_gravity="center"
+            android:background="@drawable/locationname"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/secretstars"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#604F4F4F"
+        app:layout_constraintTop_toBottomOf="@+id/imagemap"
+        tools:layout_editor_absoluteX="16dp">
+
+
+        <TextView
+            android:padding="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="SECRET STAR "
+            android:textColor="#FFFF"
+            android:textSize="20dp"
+            android:typeface="monospace"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/star"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:background="#604F4F4F"
+        app:layout_constraintTop_toBottomOf="@+id/secretstars"
+        tools:layout_editor_absoluteX="16dp"
+        android:paddingBottom="5dp">
+
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:layout_gravity="center"
+            android:background="@drawable/secret"/>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

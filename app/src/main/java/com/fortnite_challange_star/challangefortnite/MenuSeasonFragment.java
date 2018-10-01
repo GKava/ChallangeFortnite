@@ -10,6 +10,10 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,6 +21,8 @@ import android.widget.TextView;
 public class MenuSeasonFragment extends Fragment implements View .OnClickListener{
 LinearLayout week1,week2,week3,week4,week5,week6,week7,week8,week9,week10;
 TextView textViewHeader;
+int adsInt=0;
+    private InterstitialAd mInterstitialAd;
     public MenuSeasonFragment() {
         // Required empty public constructor
     }
@@ -51,7 +57,24 @@ View view = inflater.inflate(R.layout.fragment_menu_season, container, false);
         week8.setOnClickListener(this);
         week9.setOnClickListener(this);
         week10.setOnClickListener(this);
+
+        MobileAds.initialize(getActivity(),
+                "ca-app-pub-1336421761813784~1587796803");
+
+        mInterstitialAd = new InterstitialAd(getActivity());
+        mInterstitialAd.setAdUnitId("ca-app-pub-1336421761813784/2865219455");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
         return view;
+    }
+
+    public void showInterstitial (){
+        if (adsInt==0) {
+            if (mInterstitialAd.isLoaded()) {
+                mInterstitialAd.show();
+                adsInt=1;
+            }
+        }
     }
 
 
@@ -59,6 +82,7 @@ View view = inflater.inflate(R.layout.fragment_menu_season, container, false);
     public void onClick(View view) {
 switch (view.getId()){
     case R.id.week1: {
+        showInterstitial();
         MainActivity.fragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, new Week1())
                 .addToBackStack(null)
