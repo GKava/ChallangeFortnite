@@ -4,18 +4,18 @@
 
     <corners android:radius="1dp" />
 
-    <gradient
-        android:angle="90"
-        android:endColor="#47aed1"
-        android:startColor="#47aed1"
-        android:type="linear" />
-
-
     <!--<gradient-->
         <!--android:angle="90"-->
         <!--android:endColor="#bfe3ef"-->
         <!--android:startColor="#47aed1"-->
         <!--android:type="linear" />-->
+
+
+    <gradient
+        android:angle="90"
+        android:endColor="#c274fb"
+        android:startColor="#52209d "
+        android:type="linear" />
 
     <padding
         android:bottom="0dp"

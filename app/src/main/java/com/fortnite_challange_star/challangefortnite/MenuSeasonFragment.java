@@ -1,12 +1,14 @@
 package com.fortnite_challange_star.challangefortnite;
 
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 
 /**
@@ -14,7 +16,7 @@ import android.widget.LinearLayout;
  */
 public class MenuSeasonFragment extends Fragment implements View .OnClickListener{
 LinearLayout week1,week2,week3,week4,week5,week6,week7,week8,week9,week10;
-
+TextView textViewHeader;
     public MenuSeasonFragment() {
         // Required empty public constructor
     }
@@ -36,6 +38,7 @@ View view = inflater.inflate(R.layout.fragment_menu_season, container, false);
         week8 = view.findViewById(R.id.week8);
         week9 = view.findViewById(R.id.week9);
         week10 = view.findViewById(R.id.week10);
+        textViewHeader = view.findViewById(R.id.textViewHeader);
 
 
         week1.setOnClickListener(this);
@@ -52,17 +55,14 @@ View view = inflater.inflate(R.layout.fragment_menu_season, container, false);
     }
 
 
-    public void checkCompleteAndSetBacground(){
-        // какие то условия
-week1.setBackgroundResource(R.drawable.weekcomplete);
-
-    }
-
     @Override
     public void onClick(View view) {
 switch (view.getId()){
     case R.id.week1: {
-
+        MainActivity.fragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, new Week1())
+                .addToBackStack(null)
+                .commit();
         break;
     }
     case R.id.week2: {

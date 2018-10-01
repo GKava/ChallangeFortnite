@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgrovfort"
+    tools:context=".Week1">
+
+    <LinearLayout
+        android:id="@+id/headerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#604F4F4F">
+
+
+        <TextView
+            android:id="@+id/textViewHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Week 1"
+            android:textColor="#FFFF"
+            android:typeface="monospace"
+            android:textSize="40dp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
