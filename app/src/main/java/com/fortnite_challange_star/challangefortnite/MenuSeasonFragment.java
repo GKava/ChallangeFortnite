@@ -1,6 +1,7 @@
 package com.fortnite_challange_star.challangefortnite;
 
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -63,23 +64,39 @@ View view = inflater.inflate(R.layout.fragment_menu_season, container, false);
 
         mInterstitialAd = new InterstitialAd(getActivity());
         mInterstitialAd.setAdUnitId("ca-app-pub-1336421761813784/2865219455");
+
+
+//        test
+//        MobileAds.initialize(getActivity(),
+//                "ca-app-pub-3940256099942544~3347511713");
+//
+//        mInterstitialAd = new InterstitialAd(getActivity());
+//        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+
+
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
         return view;
     }
 
     public void showInterstitial (){
-        if (adsInt==0) {
+        if (adsInt==(1^4^7^10^13^16^19^21)) {
             if (mInterstitialAd.isLoaded()) {
                 mInterstitialAd.show();
-                adsInt=1;
+                adsInt++;
             }
+        }
+        else
+        {
+            adsInt++;
         }
     }
 
 
     @Override
     public void onClick(View view) {
+        WeekClosed weekClosed = new WeekClosed();
+
 switch (view.getId()){
     case R.id.week1: {
         showInterstitial();
@@ -90,39 +107,103 @@ switch (view.getId()){
         break;
     }
     case R.id.week2: {
-
+        showInterstitial();
+        MainActivity.fragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, new Week2())
+                .addToBackStack(null)
+                .commit();
         break;
     }
     case R.id.week3: {
+        showInterstitial();
 
+        Bundle bundle = new Bundle();
+        bundle.putInt("weekNumber", 3);
+        weekClosed.setArguments(bundle);
+
+
+        MainActivity.fragmentManager.beginTransaction()
+                .replace(R.id.fragment_container,  weekClosed)
+                .addToBackStack(null)
+                .commit();
         break;
     }
     case R.id.week4: {
+        showInterstitial();
 
+        Bundle bundle = new Bundle();
+        bundle.putInt("weekNumber", 4);
+        weekClosed.setArguments(bundle);
+        MainActivity.fragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, weekClosed)
+                .addToBackStack(null)
+                .commit();
         break;
     }
     case R.id.week5: {
-
+        showInterstitial();
+        Bundle bundle = new Bundle();
+        bundle.putInt("weekNumber", 5);
+        weekClosed.setArguments(bundle);
+        MainActivity.fragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, weekClosed)
+                .addToBackStack(null)
+                .commit();
         break;
     }
     case R.id.week6: {
-
+        showInterstitial();
+        Bundle bundle = new Bundle();
+        bundle.putInt("weekNumber", 6);
+        weekClosed.setArguments(bundle);
+        MainActivity.fragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, weekClosed)
+                .addToBackStack(null)
+                .commit();
         break;
     }
     case R.id.week7: {
-
+        showInterstitial();
+        Bundle bundle = new Bundle();
+        bundle.putInt("weekNumber", 7);
+        weekClosed.setArguments(bundle);
+        MainActivity.fragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, weekClosed)
+                .addToBackStack(null)
+                .commit();
         break;
     }
     case R.id.week8: {
-
+        showInterstitial();
+        Bundle bundle = new Bundle();
+        bundle.putInt("weekNumber", 8);
+        weekClosed.setArguments(bundle);
+        MainActivity.fragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, weekClosed)
+                .addToBackStack(null)
+                .commit();
         break;
     }
     case R.id.week9: {
-
+        showInterstitial();
+        Bundle bundle = new Bundle();
+        bundle.putInt("weekNumber", 9);
+        weekClosed.setArguments(bundle);
+        MainActivity.fragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, weekClosed)
+                .addToBackStack(null)
+                .commit();
         break;
     }
     case R.id.week10: {
-
+        showInterstitial();
+        Bundle bundle = new Bundle();
+        bundle.putInt("weekNumber", 10);
+        weekClosed.setArguments(bundle);
+        MainActivity.fragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, weekClosed)
+                .addToBackStack(null)
+                .commit();
         break;
     }
 

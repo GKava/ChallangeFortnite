@@ -45,5 +45,16 @@
 
     </com.google.android.gms.ads.AdView>
 
+    <Button
+        android:id="@+id/share"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/share"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintTop_toTopOf="@+id/scrollView2" />
+
 
 </android.support.constraint.ConstraintLayout>
